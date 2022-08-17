@@ -1,0 +1,33 @@
+<htm lang="en">
+    <body>
+<script>
+function validateform(){
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+if(name==null || name==""){
+alert("name can't be blank");
+return false;
+}else if(password.length<6){
+alert("password must be at least 6 charcters long.");
+return false;
+}
+}
+function colorpickerbodybg() {
+document.body.style.backgroundcolor=document.getElementById("CP").value;
+}
+function focusevent()
+{
+document.getElementById("text1").style.background="aqua";
+}
+</script>
+<body>
+<form name="myform" method="post" onsubmit="return validateform()">
+Email:<input id="text1" type="text" name="name"><br>
+username:<input type="text"name="name"  onfocus="focusevent()"><br>
+password:<input type="password" name="password"><br>
+<input type="submit" value="ok">
+<input type="submit" value="cancel"><br>
+<input type="color"id="CP" onchange="colorpickerbodybg()"/>
+</form>
+</body>
+</html>
